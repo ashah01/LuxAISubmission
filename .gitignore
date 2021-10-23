@@ -2,3 +2,4 @@ replays/
 replay.json
 errorlogs
 simple/__pycache__
+.DS_Store
