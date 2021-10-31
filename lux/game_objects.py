@@ -85,9 +85,15 @@ class Unit:
         self.cargo.coal = coal
         self.cargo.uranium = uranium
     def is_worker(self) -> bool:
+        """
+        If the unit is a worker
+        """
         return self.type == UNIT_TYPES.WORKER
 
     def is_cart(self) -> bool:
+        """
+        If the unit is a cart
+        """
         return self.type == UNIT_TYPES.CART
 
     def get_cargo_space_left(self):

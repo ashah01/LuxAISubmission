@@ -1,6 +1,6 @@
 from typing import Dict
 import sys
-from agent import agent
+from agents.sacrifice import agent
 if __name__ == "__main__":
     
     def read_input():
@@ -13,7 +13,7 @@ if __name__ == "__main__":
             raise SystemExit(eof)
     step = 0
     class Observation(Dict[str, any]):
-        def __init__(self, player=0) -> None:
+        def __init__(self, player=0):
             self.player = player
             # self.updates = []
             # self.step = 0

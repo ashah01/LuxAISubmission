@@ -36,6 +36,13 @@ def agent(observation, configuration):
                 resource_tiles.append(cell)
 
     # we iterate over all our units and do something with them
+    
+    # Research if city tile is null cooldown
+    if (not player.researched_uranium()):
+        for k, city in player.cities.items():
+            for citytile in city.citytiles:
+                if citytile.can_act():
+                    actions.append(citytile.research())
     for unit in player.units:
         if unit.is_worker() and unit.can_act():
             closest_dist = math.inf
