@@ -15,6 +15,8 @@ class Player(S_Player):
     [New Methods]: None
     """
 
+    pass
+
 
 class City(S_City):
     """
@@ -23,6 +25,8 @@ class City(S_City):
     [New Methods]: None
     """
 
+    pass
+
 
 class Unit(S_Unit):
     """
@@ -30,6 +34,15 @@ class Unit(S_Unit):
 
     [New Methods]: get_closest_tile
     """
+
+    def move_to_tile(self, tile: Cell) -> str:
+        """The unit moves in the direction of the given tile
+
+        Args:
+            tile (Cell): The given tile
+        """
+        direction = self.pos.direction_to(tile.pos)
+        return self.move(direction)
 
     def get_closest_tile(self, tiles: list[Cell]) -> Cell:
         """Get the closest tile to the unit
@@ -57,6 +70,8 @@ class Cargo(S_Cargo):
     [New Methods]: None
     """
 
+    pass
+
 
 class CityTile(S_CityTile):
     """
@@ -64,3 +79,5 @@ class CityTile(S_CityTile):
 
     [New Methods]: None
     """
+
+    pass
